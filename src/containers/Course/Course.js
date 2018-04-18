@@ -3,9 +3,9 @@ import React, { Component } from 'react';
 class Course extends Component {
 
     componentDidMount () {
-        console.log('Query params: ', this.props.location.search);
+        console.log('Props: ', this.props);
         console.log('Link params: ', this.props.match.params);
-        // parsing query params for ourselfs
+        // parsing query params for ourselves
         const search = new URLSearchParams(this.props.location.search);
         console.log(search.entries().next().value);
     }

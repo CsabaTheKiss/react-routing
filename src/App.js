@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import { Route, BrowserRouter, Link, Switch } from 'react-router-dom';
+import { Route, BrowserRouter, Link } from 'react-router-dom';
 
 import Courses from './containers/Courses/Courses';
-import Course from './containers/Course/Course';
 import Users from './containers/Users/Users';
 
 class App extends Component {
@@ -28,10 +27,7 @@ class App extends Component {
           </nav>
           
           <Route path="/users" component={Users} />
-          <Switch>
-            <Route path="/courses" exact component={Courses} />
-            <Route path="/course/:id" exact component={Course} />
-          </Switch>
+          <Route path="/courses" component={Courses} />
         </div>
       </BrowserRouter>
     );
