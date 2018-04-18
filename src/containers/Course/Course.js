@@ -10,6 +10,10 @@ class Course extends Component {
         console.log(search.entries().next().value);
     }
 
+    componentWillUnmount () {
+        console.warn('[Course.js] Component will unmount');
+    }
+
     render () {
         const courseId = +this.props.match.params.id;
         const search = new URLSearchParams(this.props.location.search);

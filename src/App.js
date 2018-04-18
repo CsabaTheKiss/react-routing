@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route, BrowserRouter, Link, Switch } from 'react-router-dom';
+import { Route, BrowserRouter, Link, Switch, Redirect } from 'react-router-dom';
 
 import Courses from './containers/Courses/Courses';
 import Users from './containers/Users/Users';
@@ -30,6 +30,7 @@ class App extends Component {
           <Route path="/users" component={Users} />
           <Switch>
             <Route path="/courses" component={Courses} />
+            <Redirect from="/all-courses" to="/courses" />
             <Route component={Unknown} />
           </Switch>
         </div>
