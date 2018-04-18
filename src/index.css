@@ -4,3 +4,22 @@ body {
   font-family: sans-serif;
   text-align: center;
 }
+
+.App nav ul {
+  list-style: none;
+}
+
+.App nav ul li {
+  display: inline-block;
+  margin: 10px 20px;
+  text-decoration: none;
+}
+
+.App nav ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+.App nav ul li a:hover {
+  color: orange;
+}
